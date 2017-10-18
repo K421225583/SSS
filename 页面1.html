@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="scss/scss1.css"/>
+	</head>
+	<body>
+		<header id="tou">
+			<input type="text" placeholder="找影片、找影人、找公司" v-model="t1" @keyup="get($event)"/>
+			<img src="images/03_03.png"/>
+			<!--<ul>
+				<li v-for="item in arr" :calss="{active:$index==iNow}">{{item}}</li>
+			</ul>-->
+		</header>
+		<nav>
+			<ul>
+				<li>
+					<img src="images/03_07.png" alt="" />
+					<p>影片榜</p>
+					<p>爆款扑街早知道</p>
+				</li>
+				<li>
+					<img src="images/03_10.png" alt="" />
+					<p>影人榜</p>
+					<p>鲜肉鲜花谁更强</p>
+				</li>
+				<li>
+					<img src="images/03_13.png" alt="" />
+					<p>公司榜</p>
+					<p>业绩排名最清晰</p>
+				</li>
+			</ul>
+		</nav>
+		<article>
+			<div>
+				<p>即将上映（8月共51步）</p>
+				<img src="images/03_012.png" alt="" />
+			</div>
+			<section>
+				<div>
+					<p>8月4日  周五</p>
+				</div>
+				<div>
+					<ul>
+						<li>
+							<img src="images/03_19.png" alt="" />
+							<p>我是马步里</p>
+							<p>29979人想看</p>
+						</li>
+						<li>
+							<img src="images/04_21.png" alt="" />
+							<p>玩偶奇兵</p>
+							<p>15345人想看</p>
+						</li>
+						<li>
+							<img src="images/03_23.png" alt="" />
+							<p>龙之战</p>
+							<p>13655人想看</p>
+						</li>
+						<li>
+							<img src="images/03_19.png" alt="" />
+							<p>大大大阿达大</p>
+							<p>29979人想看</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</article>
+		<div id="foter">
+			<div>
+				<p>暑期档影片期待版</p>
+			</div>
+			<div>
+				<p>根据猫眼想看数排名（统计时间截止于2017.06.29）</p>
+			</div>
+			<img src="images/03_28.png"/>
+			
+		</div>
+		<footer>
+			<ul>
+				<li>
+					<img src="images/04_03.png"/>
+					<p>票房</p>
+				</li>
+				<li>
+					<img src="images/04_05.png"/>
+					<p>网播/收视</p>
+				</li>
+				<li>
+					<img src="images/04_07.png" alt="" />
+					<p>资料库</p>
+				</li>
+				<li>
+					<img src="images/04_09.png"/>
+					<p>找合作</p>
+				</li>
+				<li>
+					<img src="images/04_11.png"/>
+					<p>我的</p>
+				</li>
+			</ul>
+		</footer>
+	</body>
+	<script src="JS/Vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="JS/vue-resource.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script type="text/javascript">
+		window.onload=function(){
+			new Vue({
+				el:'#tou',
+				data:{
+					t1:'',
+					arr:[],
+					iNow:-1
+				},
+				methods:{
+					get:function(ev){
+						if(ev.keyCode==40 || ev.keyCode==38)return;
+						if(ev.keyCode==13){
+							window.open('https://www.baidu.com/s?wd='+this.t1)
+						}
+						this.$http.jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',{
+							wd:this.t1
+						},{
+							jsonp:'cb'
+						}).then(function(res){
+							console.
+						})
+					}
+				}
+			})
+		}
+		
+	</script>-->
+</html>
